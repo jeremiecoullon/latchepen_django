@@ -1,0 +1,5 @@
+venv/
+.DS_Store
+www/
+*.sqlite3
+*.pyc

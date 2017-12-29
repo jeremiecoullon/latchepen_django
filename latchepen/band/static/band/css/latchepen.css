@@ -1,0 +1,757 @@
+/*!
+ * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Josefin Slab', serif;
+     background: #fafafa;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+h1{
+  font-size: 400%;
+}
+p {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+@media(min-width:768px) {
+    p {
+        margin: 0 0 35px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+@media(max-width:768px){
+  h1{
+    font-size: 240%;
+  }
+}
+
+
+
+/* newsletter popup window */
+
+a.selected {
+  background-color:#1F75CC;
+  color:white;
+  z-index:100;
+}
+
+.messagepop {
+  background-color:rgba(222, 222, 222, 0.75);
+  border:1px solid #999999;
+  cursor:default;
+  display:none;
+  margin-top: 15px;
+  position:absolute;
+  text-align:left;
+  width:394px;
+  z-index:50;
+  padding: 25px 25px 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  padding-left: 15px;
+  text-indent: -15px;
+  color:#FF5B5B;
+}
+
+.messagepop p, .messagepop.div {
+  border-bottom: 1px solid #EFEFEF;
+  margin: 8px 0;
+  padding-bottom: 8px;
+}
+.newsletter-popup {
+  width:100%;
+}
+.newsletter-signup_text{
+  overflow: hidden;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333333;
+  position: relative;
+  top: 13px;
+}
+
+#mc_embed_signup .newsletter-button {
+  clear:both;
+  background-color: rgba(222, 222, 222, 0.75);
+  border: 0 none;
+  border-width: 3px;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-size:15px;
+  font-weight: bold;
+  height: 45px;
+  margin: 0 5px 10px 0;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  border:3px solid #333333;
+}
+#mc_embed_signup .newsletter-button:hover {
+  color: #333333;
+  /*background-color: #FFC21C;*/
+  border-color: #333333;
+}
+/*#FF5B5B*/
+/* inline error in sign up form: have the background colour as dark grey rather than red  #27282D */
+#mc_embed_signup input.mce_inline_error {
+  border-color:#27282D !important;
+}
+#mc_embed_signup div.mce_inline_error {
+  background-color:#27282D !important;
+  text-transform: lowercase;
+}
+#mc_embed_signup div.mce_inline_error::first-letter {
+  text-transform: uppercase;
+}
+#mc_embed_signup #mce-success-response-KiW {color:#27282D; display:none;}
+/* end of inline error for signup form */
+#mce-EMAIL{
+  width: 165px;
+}
+
+#mc_embed_signup form {
+  background-color: rgba(222, 222, 222, 0.75);
+  border-width: 3px;
+}
+.mc_email_form{
+  border:3px solid white;
+  height: 35px;
+  position: relative;
+  left: 70px;
+  top: 4px;
+  color: black;
+}
+@media(max-width:768px){
+  .mc_email_form{
+    left:0px;
+    top: -6px;
+  }
+  .newsletter-button{
+    height:35px;
+  }
+}
+/* end of newsletter popup window */
+
+@media (max-width: 993px){
+.navbar-right {
+  font-size: .8em;
+}
+}
+/*adds padding left to separate 'newsletter' from the other tabs */
+@media(min-width:991px){
+  .navbar-right{
+    padding-left: 30px;
+  }
+}
+
+
+
+#gigs{
+  padding-top:100px;
+}
+#contact{
+  padding-top: 200px
+}
+
+/*gigs section*/
+.gig_list{
+  width: 100%;
+  margin: auto;
+  line-height: 30px;
+  padding-bottom: 40px;
+  font-size: 20px;
+  list-style-type: none;
+}
+.gig_list_element{
+  margin: 20px;
+}
+/* Clip Path */
+
+/* makes the padding for gigs and contact section smaller on mobile */
+@media(max-width:768px){
+  .gig_list{
+    padding-left:0px;
+  }
+  #gigs{
+    padding-top:70px;
+  }
+  #contact{
+    padding-top: 70px
+  }
+}
+
+.clip-circle {
+
+  -webkit-clip-path: circle(50.0% at 50% 50%);
+clip-path: circle(50.0% at 50% 50%);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+    }
+
+@media(min-width:1200px) {
+  .clip-circle {
+    width: 70%;
+    /*margin-left:60px;*/
+  }
+}
+
+@media only screen and (max-width:991px) {
+  .clip-circle {
+    /*display:none;*/
+    width: 50%;
+  }
+}
+
+/*youtube videos*/
+
+.youtube_videos{
+  padding-bottom: 30px;
+}
+/* bios of musician */
+.musician_description{
+  padding-top: 50px;
+}
+
+.image_gallery{
+  font-size: 1.7em;
+  padding-top: 20px;
+}
+
+/*padding on mobile for musician's name and stuff*/
+@media(max-width:768px){
+  .musician_name{
+    padding-top: 30px;
+    margin-bottom: 20px
+  }
+  .musician_description{
+    padding-top: 20px;
+  }
+  .image_gallery{
+    padding-top: 40px;
+  }
+}
+
+
+/* social media buttons */
+.btn-outline {
+    margin-top: 15px;
+    border: solid 2px #fff;
+    font-size: 20px;
+    color: #fff;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+    border: solid 2px #fff;
+    color: #33353d;
+    background: #fff;
+}
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(228, 209, 0);
+    color: rgb(228, 209, 0);
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+
+a {
+    color: #FF5B5B;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    /*color: #C50000;*/
+    color: #FA3131;
+}
+
+.light {
+    font-weight: 400;
+}
+.navbar{
+  min-height: 70px;
+}
+.navbar-custom {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-family: 'Josefin Slab', serif;
+    /*background-color: #000;*/
+    background-color: rgba(222, 222, 222, 0.8);
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+    /* this is to position the svg logo properly in the navbar */
+    position:relative;
+    bottom:15px;
+    width:70%;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: #fff;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover {
+    outline: 0;
+    color: rgba(255,255,255,.8);
+    background-color: transparent;
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+    outline: 0;
+    background-color: transparent;
+}
+
+.navbar-custom .nav li.active {
+    outline: 0;
+}
+
+.navbar-custom .nav li.active a {
+    /*background-color: rgba(255,255,255,.3);*/
+    border-bottom: 5px solid #FFEA03;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-left: 10px;
+    padding-right: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar-custom .nav li.active a:hover {
+    color: #fff;
+}
+
+@media(min-width:768px) {
+    .navbar-custom {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        background: rgba(222, 222, 222, 0.75);
+    }
+}
+.one{
+
+}
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    /* hip ass yellow */
+    background-color: #013A6B;
+    background: #fff url(../img/latchepen_background.png) no-repeat center 0px;
+}
+.intro .intro-body {
+    display: block;
+    vertical-align: middle;
+    padding-top: 170px;
+}
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro .intro-body .brand-heading {
+    font-size: 40px;
+}
+
+.intro .intro-body .intro-text {
+    font-size: 18px;
+}
+
+@media(min-width:768px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+    .intro .intro-body .brand-heading {
+        font-size: 100px;
+    }
+    .intro .intro-body .intro-text {
+        font-size: 26px;
+    }
+}
+
+.btn-circle {
+    width: 70px;
+    height: 70px;
+    padding: 7px 16px;
+    border: 2px solid rgb(228, 209, 0);
+    border-radius: 100%!important;
+    font-size: 40px;
+    color: rgb(228, 209, 0);
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+    position: relative;
+    top: 60px;
+}
+
+.btn-circle:hover,
+.btn-circle:focus {
+    outline: 0;
+    color: rgb(134, 123, 0);
+    background: rgba(255,255,255,.1);
+}
+@media(max-width:786px){
+  .btn-circle{
+    border: 2px solid #fff;
+    color: #fff;
+  }
+}
+.btn-circle i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+}
+
+.btn-circle:hover i.animated {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.content-section {
+    padding-top: 100px;
+}
+#about, #the_band, #gigs, #listen, .listen-section, #contact{
+  background: #fafafa;
+  color: #333333;
+}
+
+.listen-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background: #fff url(../img/latchepen_yellow_slash_1.png) no-repeat center 0px;
+    background-color: #fafafa;
+}
+
+/*This gives a nice padding for the sections so they're separate from each other*/
+@media(min-width:768px) {
+    .content-section {
+        padding-top: 120px;
+    }
+
+    .listen-section {
+        padding: 100px 0;
+    }
+}
+/* make padding-top 100px otherwise there's way too much space above the 'listen' section */
+#listen{
+  padding-top: 100px;
+}
+@media(max-width:768px) {
+  .intro .intro-body {
+      padding-top: 40px
+  }
+  .navbar-custom{
+    background-color: rgba(222, 222, 222, 0.94);
+  }
+  .navbar-custom .nav li.active a{
+    width: 20%;
+  }
+  .latchepen_logo_header{
+    padding-bottom: 20px;
+  }
+  #listen{
+    padding-top: 0px;
+  }
+}
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-default {
+    border: 1px solid #42dca3;
+    color: #42dca3;
+    background-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid #42dca3;
+    outline: 0;
+    color: #000;
+    background-color: #42dca3;
+}
+
+ul.banner-social-buttons {
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    ul.banner-social-buttons li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    padding: 50px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+::selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+
+
+
+/* HACK HACK HACK */
+.lalala{
+  background: white;
+  color: black;
+  height: 700px;
+}
+
+
+
+.latchepen_logo{
+  margin:auto;
+  margin-bottom: 30px;
+  font-family: 'Josefin Slab', serif;
+  font-size:100px;
+  text-transform: initial;
+  color: #333333;
+}
+.intro-text{
+  color: #333333;
+  font-weight: 300;
+}
+.latchepen_logo_navbar{
+  margin:auto;
+  margin-bottom: 30px;
+  width: 135px;
+  font-family: 'Josefin Slab', serif;
+  font-size:30px;
+  text-transform: initial;
+  /*border-bottom: 1px solid #333333;*/
+  color: #333333;
+}
+.latchepen_logo_header{
+  width: 50%;
+}
+
+.navbar-custom a{
+  color: #333333;
+}
+@media(max-width:768px){
+  .latchepen_logo_navbar{
+    width: 33%;
+    margin-left: 20px;
+    margin-top: 7px;
+  }
+  .navbar{
+    min-height: 60px;
+  }
+}
+
+
+/*.listen-section{*/
+/* .le_gigs{
+  padding-bottom: 200px;
+} */
+a {
+  color: rgb(228, 209, 0);
+}
+a:hover{
+  color: rgb(134, 123, 0);
+}
+
+.new_album_CTA{
+  color: #333333;
+  margin-bottom: 0px;
+  font-weight: 400;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: auto;
+  width: 40%;
+  padding: 10px 20px;
+  /*background-color: #FFEA03;*/
+}
+@media(max-width: 414px){
+  .new_album_CTA{
+    font-size: 20px;
+  }
+}
+
+.new_album-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background: #fff url(../img/latchepen_yellow_slash_1.png) no-repeat center 0px;
+    background-color: #fafafa;
+}

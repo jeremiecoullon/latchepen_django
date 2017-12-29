@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'band/style.css' %}" />
+  </head>
+  <body>
+    <h1>Le band</h1>
+    <p>people</p>
+
+    <h1>Gallery</h1>
+    {% for im in gallery %}
+      <img src="{{ im.image.url }}" alt="" width="100px">
+    {% endfor %}
+
+    <h1>Gigs:</h1>
+    <ul class = "gig_list">
+    {% for gig in gigs %}
+      {% if gig.coming_up %}
+        <li class="gig_list_element"><i>{% if gig.preview_date_admin %}{{ gig.preview_date_admin }}{% else %}{{ gig.preview_date_hidden }}{% endif %}</i>
+           - Latchepen @ <a href="{{ gig.gig_link }}" target="_blank">{{ gig.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+
+    <h1>Videos:</h1>
+    {% for video in videos %}
+      <iframe width="454" height="280" src="{{ video.youtube_link }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+    {% endfor %}
+  </body>
+</html>
