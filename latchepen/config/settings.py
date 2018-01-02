@@ -24,12 +24,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = get_env_variable('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.path.isfile("../prod.txt"):
+if os.path.isfile("../../prod.txt"):
     DEBUG = False
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['139.59.189.173']
+ALLOWED_HOSTS = ['139.59.189.173', 'localhost']
 
 
 # Application definition
