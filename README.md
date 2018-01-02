@@ -1,3 +1,3 @@
 # Latchepen
 
-Latchepen loves Django
+[Latchepen](http://latchepen.com/) loves Django
