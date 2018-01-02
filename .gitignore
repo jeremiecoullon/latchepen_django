@@ -3,3 +3,5 @@ venv/
 www/
 *.sqlite3
 *.pyc
+logs/
+run/
