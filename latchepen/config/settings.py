@@ -29,7 +29,7 @@ if os.path.isfile("../../prod.txt"):
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['139.59.189.173', 'latchepen.com', 'localhost']
+ALLOWED_HOSTS = ['139.59.189.173', '.latchepen.com', 'localhost']
 
 
 # Application definition
