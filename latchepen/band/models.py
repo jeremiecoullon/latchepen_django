@@ -89,6 +89,14 @@ class Gig(models.Model):
         else:
             return self.preview_date_hidden
 
+
+    def gig_date_filter(self):
+        "Publication date used to filter in views: also includes jamboree date"
+        if self.jamboree:
+            return self.get_next_third_sunday()
+        else:
+            return self.gig_date.date()
+
     def save(self, *args, **kwargs):
         self.preview_date_hidden = self.format_date(le_date=self.gig_date)
         if self.jamboree:
