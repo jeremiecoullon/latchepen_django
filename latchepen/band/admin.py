@@ -16,6 +16,7 @@ class GigAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Gig info', {'fields': ['name', 'gig_link']}),
         ('Date', {'fields': ['gig_date', 'preview_date_admin']}),
+        ('Jamboree', {'fields': ['jamboree']}),
     ]
 
 

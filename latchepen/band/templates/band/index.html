@@ -307,8 +307,7 @@
                         {% for gig in gigs %}
                           {% if gig.coming_up %}
                               <li class="gig_list_element">
-                                <i>{% if gig.preview_date_admin %}{{ gig.preview_date_admin }}
-                                  {% else %}{{ gig.preview_date_hidden }}{% endif %}</i>
+                                <i>{{ gig.display_gig_date }}</i>
                                  - Latchepen @
                                  {% if gig.gig_link %}<a href="{{ gig.gig_link }}" target="_blank">{{ gig.name }}</a>
                                    {% else %}{{ gig.name }}{% endif %}
