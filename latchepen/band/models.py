@@ -60,7 +60,7 @@ class Gig(models.Model):
             if next_month == 13:
                 le_year, next_month = timezone.now().year+1, 1
             return self.get_third_sunday_of_month(year=le_year, month=next_month)
-    
+
     def format_date(self, le_date):
         """
         Format date to display in gig list
@@ -82,10 +82,10 @@ class Gig(models.Model):
         """
         Returns the gig date to display in the template
         """
-        if self.preview_date_admin:
-            return self.preview_date_admin
-        elif self.jamboree:
+        if self.jamboree:
             return self.format_date(le_date=self.get_next_third_sunday())
+        elif self.preview_date_admin:
+            return self.preview_date_admin
         else:
             return self.preview_date_hidden
 

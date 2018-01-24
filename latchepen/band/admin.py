@@ -6,13 +6,7 @@ from .models import BandImage, Video, Gig
 @admin.register(Gig)
 class GigAdmin(admin.ModelAdmin):
 
-    def preview_date(self, obj):
-        if obj.preview_date_admin:
-            return obj.preview_date_admin
-        else:
-            return obj.preview_date_hidden
-
-    list_display = ['name', 'preview_date']
+    list_display = ['name', 'display_gig_date']
     fieldsets = [
         ('Gig info', {'fields': ['name', 'gig_link']}),
         ('Date', {'fields': ['gig_date', 'preview_date_admin']}),

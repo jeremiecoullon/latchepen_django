@@ -305,7 +305,7 @@
                       <h2>Upcoming gigs</h2>
                       <ul class = "gig_list">
                         {% for gig in gigs %}
-                          {% if gig.coming_up %}
+                          {% if gig.coming_up or gig.jamboree%}
                               <li class="gig_list_element">
                                 <i>{{ gig.display_gig_date }}</i>
                                  - Latchepen @
