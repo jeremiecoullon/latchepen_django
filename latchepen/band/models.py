@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from .date_utils import format_date, get_next_third_sunday
 import os
-from calendar import Calendar
 
 
 class BandImage(models.Model):
@@ -9,6 +9,7 @@ class BandImage(models.Model):
 
     def __str__(self):
         return self.image.url
+
 
 class Gig(models.Model):
     name = models.CharField(max_length=200)
@@ -25,74 +26,21 @@ class Gig(models.Model):
         "Check whether the gig is in the future"
         return self.gig_date >= timezone.now()
 
-    def get_third_sunday_of_month(self, year, month):
-        """
-        Finds the third Sunday of a given month in a year
-
-        Parameters
-        ----------
-        year, month: Datetime.year, Datetime.month
-
-        Returns
-        -------
-        third_sunday: Datetime.date
-        """
-        iter_dates = Calendar().itermonthdates(year, month)
-        list_days = [c for c in iter_dates if c.month==month]
-        third_sunday = [day for day in list_days if day.strftime("%A")=="Sunday"][2]
-        return third_sunday
-
-    def get_next_third_sunday(self):
-        """
-        Finds the next third Sunday
-
-        Returns
-        -------
-        get_next_third_sunday: Datetime.date
-        """
-        third_sunday_current_month = self.get_third_sunday_of_month(year=timezone.now().year, month=timezone.now().month)
-        if third_sunday_current_month >= timezone.now().date():
-            return third_sunday_current_month
-        else:
-            le_year = timezone.now().year
-            next_month = timezone.now().month+1
-            if next_month == 13:
-                le_year, next_month = timezone.now().year+1, 1
-            return self.get_third_sunday_of_month(year=le_year, month=next_month)
-
-    def format_date(self, le_date):
-        """
-        Format date to display in gig list
-
-        Parameters
-        ----------
-        le_date: Datetime.date
-
-        Returns
-        formatted_date: str
-        """
-        date_num = le_date.strftime("%d")
-        if date_num[0]=='0':
-            date_num=date_num[1]
-        return le_date.strftime("%A ")+date_num + le_date.strftime(" %B %Y")
-
-
     def display_gig_date(self):
         """
         Returns the gig date to display in the template
         """
         if self.jamboree:
-            return self.format_date(le_date=self.get_next_third_sunday())
+            return format_date(le_date=get_next_third_sunday())
         elif self.preview_date_admin:
             return self.preview_date_admin
         else:
-            return self.format_date(le_date=self.gig_date)
-
+            return format_date(le_date=self.gig_date)
 
     def gig_date_filter(self):
         "Publication date used to filter in views: also includes jamboree date"
         if self.jamboree:
-            return self.get_next_third_sunday()
+            return get_next_third_sunday()
         else:
             return self.gig_date.date()
 
