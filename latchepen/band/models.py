@@ -14,7 +14,6 @@ class Gig(models.Model):
     name = models.CharField(max_length=200)
     gig_link = models.CharField(blank=True, max_length=200)
     gig_date = models.DateTimeField("Gig date")
-    preview_date_hidden = models.CharField(max_length=200)
     preview_date_admin = models.CharField(max_length=200, verbose_name="date",
         blank=True, null=True, help_text="This will override the date above when shown on the site. Otherwise leave blank")
     jamboree = models.BooleanField(default=False, help_text="Tick this box and the gig with automatically be set to Jamboree recurring every 3rd Sunday of the month")
@@ -87,7 +86,7 @@ class Gig(models.Model):
         elif self.preview_date_admin:
             return self.preview_date_admin
         else:
-            return self.preview_date_hidden
+            return self.format_date(le_date=self.gig_date)
 
 
     def gig_date_filter(self):
@@ -98,7 +97,6 @@ class Gig(models.Model):
             return self.gig_date.date()
 
     def save(self, *args, **kwargs):
-        self.preview_date_hidden = self.format_date(le_date=self.gig_date)
         if self.jamboree:
             self.gig_link = "http://www.jamboreevenue.co.uk/"
             self.name = "Jamboree"
